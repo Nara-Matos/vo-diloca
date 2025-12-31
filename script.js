@@ -155,8 +155,8 @@ checkoutBtn.addEventListener("click", function(){
 const isOpen = checkRestauranteOpen();
  if(!isOpen){
 
-   Toastify({
-    text: "Ops o restaurante está fechado!",
+  Toastify({
+    text: "Ops o restaurante está fechado no momento!",
     duration: 3000,
     close: true,
     gravity: "top", // `top` or `bottom`
@@ -165,8 +165,8 @@ const isOpen = checkRestauranteOpen();
     style: {
       background: "#ef4444",
     },
-   }).showToast();
-
+  }).showToast();
+  
     return;
  }
 
@@ -199,7 +199,7 @@ const isOpen = checkRestauranteOpen();
 function checkRestauranteOpen(){
   const data = new Date();
   const hora = data.getHours();
-  return hora >=11 && hora < 13; 
+  return hora >=18 && hora < 23; 
   //true = restaurante está aberto
 }
 
